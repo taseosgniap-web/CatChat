@@ -1,0 +1,5 @@
+{
+  "name": "Cat Chat",
+  "description": "A playful chat application where you can talk to an AI cat powered by the Gemini API. Get ready for some sassy, cat-like responses!",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://aistudiocdn.com/react@^19.1.1",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+          "react/": "https://aistudiocdn.com/react@^19.1.1/",
+          "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+        }
+      }
+    </script>
+    <style>
+      @keyframes slide-in-fade {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slide-in-fade {
+        animation: slide-in-fade 0.4s ease-out forwards;
+      }
+      
+      @keyframes cat-pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.08); }
+      }
+      .animate-cat-pulse {
+        animation: cat-pulse 1.4s infinite ease-in-out;
+        transform-origin: center;
+      }
+
+      @keyframes twitch-left {
+        0%, 100% { transform: rotate(0); }
+        50% { transform: rotate(-10deg); }
+      }
+      @keyframes twitch-right {
+        0%, 100% { transform: rotate(0); }
+        50% { transform: rotate(10deg); }
+      }
+      .animate-ear-twitch .ear-left {
+        animation: twitch-left 0.2s ease-in-out 2 alternate;
+        transform-origin: 8px 11px; /* Approximate base of the ear */
+      }
+      .animate-ear-twitch .ear-right {
+        animation: twitch-right 0.2s ease-in-out 2 alternate 0.05s;
+        transform-origin: 16px 11px; /* Approximate base of the ear */
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
